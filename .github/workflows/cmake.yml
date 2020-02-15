@@ -30,8 +30,8 @@ env:
   UPLOAD_PREFIX: pr-builds/${{ github.repository }}
 
   # OSX specific variables
-  DEVELOPER_DIR: /Applications/Xcode_11.2.app/Contents/Developer
-  MACOSX_DEPLOYMENT_TARGET: '10.11'
+  #DEVELOPER_DIR: /Applications/Xcode_11.2.app/Contents/Developer
+  #MACOSX_DEPLOYMENT_TARGET: '10.11'
   # WIN32 specific variables
   PreferredToolArchitecture: X64
   # CMAKE_BACKTRACE_TOKEN: ${MASKED_CMAKE_BACKTRACE_TOKEN}
