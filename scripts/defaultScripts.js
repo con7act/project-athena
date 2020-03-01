@@ -34,11 +34,13 @@ var DEFAULT_SCRIPTS_COMBINED = [
     "system/emote.js",
     "system/miniTablet.js",
     "system/audioMuteOverlay.js",
+    "system/inspect.js",
     "system/keyboardShortcuts/keyboardShortcuts.js"
 ];
 var DEFAULT_SCRIPTS_SEPARATE = [
     "system/controllers/controllerScripts.js",
     "communityModules/notificationCore/notificationCore.js",
+    "simplifiedUI/ui/simplifiedNametag/simplifiedNametag.js",
     {"stable": "communityModules/chat/FloofChat.js", "beta": "https://content.fluffy.ws/scripts/chat/FloofChat.js"}
     //"system/chat.js"
 ];
