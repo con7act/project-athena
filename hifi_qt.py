@@ -29,7 +29,7 @@ endif()
         self.configFilePath = os.path.join(args.build_root, 'qt.cmake')
         self.version = '5.12.3'
 
-        self.assets_url = self.readVar('EXTERNAL_BUILD_ASSETS')
+        self.assets_url = hifi_utils.readEnviromentVariableFromFile(args.build_root, 'EXTERNAL_BUILD_ASSETS')
 
         defaultBasePath = os.path.expanduser('~/hifi/qt')
         self.basePath = os.getenv('HIFI_QT_BASE', defaultBasePath)
@@ -63,10 +63,6 @@ endif()
                 raise Exception('UNKNOWN LINUX VERSION!!!')
         else:
             raise Exception('UNKNOWN OPERATING SYSTEM!!!')
-
-    def readVar(self, var):
-        with open(os.path.join(self.args.build_root, '_env', var + ".txt")) as fp:
-            return fp.read()
 
     def writeConfig(self):
         print("Writing cmake config to {}".format(self.configFilePath))
